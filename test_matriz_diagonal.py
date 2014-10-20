@@ -12,7 +12,6 @@ class MatrizTest(TestCase):
 
         matriz = MatrizDiagonal(3,3)
 
-
         resposta = matriz.get_matriz()
         self.assertEqual(resposta, esperado)
     
@@ -27,3 +26,10 @@ class MatrizTest(TestCase):
         resposta = matriz.cria_matriz_vazia()
         self.assertEqual(resposta, esperado)
     
+    
+    def test_set_diagonal(self):
+        
+        
+        matriz = MatrizDiagonal(3,3)
+        resposta = matriz.set_diagonal()
+        self.assertEqual(matriz[0],1)     
