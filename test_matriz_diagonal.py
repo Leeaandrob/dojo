@@ -31,4 +31,4 @@ class MatrizTest(TestCase):
         
         matriz = MatrizDiagonal(3,3)
         resposta = matriz.set_diagonal()
-        self.assertEqual(matriz[i],1)     
+        self.assertEqual(matriz[self.i][self.j],1)     
