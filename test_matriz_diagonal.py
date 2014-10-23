@@ -10,7 +10,7 @@ class MatrizTest(TestCase):
             [0,0,0],
         ] 
 
-        matriz = MatrizDiagonal(3,3)
+        matriz = MatrizDiagonal(3,3,0)
 
         resposta = matriz.get_matriz()
         self.assertEqual(resposta, esperado)
@@ -22,7 +22,7 @@ class MatrizTest(TestCase):
             [0,0]
         ]
 
-        matriz = MatrizDiagonal(2,2)
+        matriz = MatrizDiagonal(2,2,0)
         resposta = matriz.cria_matriz_vazia()
         self.assertEqual(resposta, esperado)
     
@@ -33,6 +33,6 @@ class MatrizTest(TestCase):
             [0, 1, 0],
             [0, 0, 1],
             ]
-        matriz = MatrizDiagonal(3,3)
+        matriz = MatrizDiagonal(3,3,0)
         resposta = matriz.set_diagonal()
         self.assertEqual(resposta,esperado)

@@ -1,10 +1,12 @@
 class MatrizDiagonal(object):
-    def __init__(self, i,j):
+    def __init__(self, i,j, conteudo):
         self.i = i
         self.j = j
+        self.conteudo = conteudo
         self.matriz = self.cria_matriz_vazia()
 
     def get_matriz(self):
+        self.conteudo = 0
         return self.matriz
 
     def cria_matriz_vazia(self):
@@ -12,7 +14,7 @@ class MatrizDiagonal(object):
         for i in range(self.i):
             matriz.append([])
             for j in range(self.j):
-                matriz[i].append(0)
+                matriz[i].append(self.conteudo)
         return matriz
     
     def set_diagonal(self):
