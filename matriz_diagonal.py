@@ -12,7 +12,7 @@ class MatrizDiagonal(object):
         for i in range(self.i):
             matriz.append([])
             for j in range(self.j):
-                matriz[i].append(None)
+                matriz[i].append(0)
         return matriz
     
     def set_diagonal(self):
@@ -20,8 +20,6 @@ class MatrizDiagonal(object):
             for j in range(self.j):
                 if i==j:
                     self.matriz[i][j] = 1
-                else:
-                   self. matriz[i][j] = 0
         return self.matriz
             
             

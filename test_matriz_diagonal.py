@@ -5,9 +5,9 @@ from matriz_diagonal import MatrizDiagonal
 class MatrizTest(TestCase):
     def test_get_matriz(self):
         esperado = [
-            [None,None,None],
-            [None,None,None],
-            [None,None,None],
+            [0,0,0],
+            [0,0,0],
+            [0,0,0],
         ] 
 
         matriz = MatrizDiagonal(3,3)
@@ -18,8 +18,8 @@ class MatrizTest(TestCase):
     
     def test_matriz_vazia(self):
         esperado = [
-            [None,None],
-            [None,None]
+            [0,0],
+            [0,0]
         ]
 
         matriz = MatrizDiagonal(2,2)
