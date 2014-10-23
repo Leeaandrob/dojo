@@ -16,6 +16,11 @@ class MatrizDiagonal(object):
         return matriz
     
     def set_diagonal(self):
+        self.matriz = matriz=[]
+        for i in range(self.i):
+            matriz.append([])
+            for j in range(self.j):
+                matriz[i].append(0)
         for i in range(self.i):
             for j in range(self.j):
                 if self.i==self.j:
