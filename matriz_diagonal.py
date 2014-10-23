@@ -16,13 +16,12 @@ class MatrizDiagonal(object):
         return matriz
     
     def set_diagonal(self):
-        matriz = self.cria_matriz_vazia()
         for i in range(self.i):
             for j in range(self.j):
                 if i==j:
-                    matriz[i][j] = 1
+                    self.matriz[i][j] = 1
                 else:
-                    matriz[i][j] = 0
-        return matriz
+                   self. matriz[i][j] = 0
+        return self.matriz
             
             
