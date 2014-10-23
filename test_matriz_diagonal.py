@@ -28,7 +28,11 @@ class MatrizTest(TestCase):
     
     
     def test_set_diagonal(self):        
-        
+        esperado = [
+            [1, None , None],
+            [None, 1, None ],
+            [None, None, 1],
+            ]
         matriz = MatrizDiagonal(3,3)
         resposta = matriz.set_diagonal()
-        self.assertEqual(matriz[0][0],1)
+        self.assertEqual(resposta,esperado)
