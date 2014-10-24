@@ -1,8 +1,18 @@
+from mock import patch
 from unittest import TestCase
-
 from matriz_diagonal import MatrizDiagonal
 
 class MatrizTest(TestCase):
+
+    @patch('matriz_diagonal.MatrizDiagonal.cria_matriz_vazia')
+
+    def test_instance(self, _method):
+        _method.return_value = 'foo'
+        obj = MatrizDiagonal(3,3,0)
+        self.assertEqual(obj.i, 3)
+        self.assertEqual(obj.j, 3)
+        self.assertEqual(obj.matriz, 'foo')
+
     def test_get_matriz(self):
         esperado = [
             [0,0,0],
