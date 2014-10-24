@@ -13,6 +13,10 @@ class MatrizTest(TestCase):
         self.assertEqual(obj.j, 3)
         self.assertEqual(obj.matriz, 'foo')
 
+    def test_apenas_matriz_quadrada(self):
+        with self.assertRaisesRegexp(Exception, 'apenas raiz quadrada'):
+            obj = MatrizDiagonal(2,3,0)
+
     def test_get_matriz(self):
         esperado = [
             [0,0,0],
