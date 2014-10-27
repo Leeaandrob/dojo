@@ -1,11 +1,46 @@
-class MinhaString(object):
+class String(object):
     def __init__(self, nome):
         self.nome = nome
 
-    def NewString(self, meu_objeto):
-        self.nome = meu_objeto
-        return self.nome
-
     def upper_case(self):
-        self.nome  = self.nome.upper()
-        return self.nome
+        conteudo = ""
+        for i in self.conteudo:
+            if i == "a":
+                i = "A"
+                conteudo+=i
+            elif i == "b":
+                i = "B"
+                conteudo+=i
+            elif i == "C":
+                i == "c": 
+            
+         
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
