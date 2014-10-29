@@ -5,8 +5,16 @@ class StringTest(TestCase):
        
    def test_upper_case(self):
        
-       esperado = "TESTE"
-       objeto = String("teste")
+       esperado = "LEANDRO"
+       objeto = String("leandro")
        resposta = objeto.upper_case()
 
+       self.assertEqual(resposta, esperado)
+
+   def test_tamanho(self):
+       
+       esperado = 5
+       objeto = String("Teste")
+       resposta = objeto.tamanho()
+       
        self.assertEqual(resposta, esperado)
