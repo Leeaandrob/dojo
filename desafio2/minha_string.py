@@ -9,13 +9,13 @@ class String(object):
         contador = 0
         for i in self.conteudo:
             for j in self.minusculo:
-                if i == j :
-                    letras+=self.maisculo[contador]
+                if i != j :
+                    contador+=1
                 else:
-                    letras+=i
-                contador+=1
-                self.conteudo = letras
-                return self.conteudo
+                    letras+=self.maisculo[contador]
+            contador=0
+            self.conteudo = letras
+        return self.conteudo
     
     def tamanho(self):
         tamanho = 0 
