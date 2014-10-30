@@ -16,13 +16,30 @@ class String(object):
             contador=0
             self.conteudo = letras
         return self.conteudo
-    
+
+    def lower_case(self):
+        letras = ""
+        contador = 0 
+        for i in self.conteudo:
+            for j in self.maisculo:
+                if i != j:
+                    contador+=1
+                else:
+                    letras+=self.minusculo[contador]
+            contador = 0
+            self.conteudo = letras
+        return self.conteudo
+                
     def tamanho(self):
         tamanho = 0 
         for i in self.conteudo:
             tamanho +=1
         return tamanho
-        
+   
+    def centralizar(self, largura, letra):
+        width = (largura*letra)+self.conteudo+(largura*letra)
+        return width
+         
 
             
                     
