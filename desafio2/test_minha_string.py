@@ -34,3 +34,9 @@ class StringTest(TestCase):
         resposta = objeto.centralizar(4, "a")
         
         self.assertEqual(resposta, esperado) 
+
+   def test_contador(self):
+        esperado = 3
+        objeto = String("teste")
+        resposta = objeto.contador("tes")
+        

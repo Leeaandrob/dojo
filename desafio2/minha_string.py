@@ -40,8 +40,12 @@ class String(object):
         width = (largura*letra)+self.conteudo+(largura*letra)
         return width
          
-
-            
+    def contador(self, count):
+        numero = 0
+        for i in self.conteudo:
+            if count in self.conteudo:
+                numero+=1
+        return numero
                     
             
             
