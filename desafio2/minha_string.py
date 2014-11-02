@@ -46,8 +46,16 @@ class String(object):
             if count in self.conteudo:
                 numero+=1
         return numero
-                    
-            
+    
+    def slice(self, comeco, fim, reposta):
+        if comeco > self.conteudo or fim:
+            reposta = False
+        else:
+            resposta = True
+        letras = self.conteudo
+        comeco = letras[comeco:]
+        final  = letras[:final]
+        return True  
             
             
             
