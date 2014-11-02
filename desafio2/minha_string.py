@@ -23,14 +23,15 @@ class String(object):
             else:
                 saida+=letra
         return saida
+
     def lower_case(self):
         saida = ""
-        for letras in self.conteudo:
+        for letra in self.conteudo:
             indice = self.indice(letra, self.maisculo)
             if indice != -1:
                 saida+=self.minusculo[indice]
             else:
-                saida+=letras
+                saida+=letra
         return saida
 
     def tamanho(self):
