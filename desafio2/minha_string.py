@@ -53,11 +53,11 @@ class String(object):
             vazio = letra * largura
             import pdb; pdb.set_trace()
             for i in self.conteudo:
-                while comeco < self.tamanho(self.conteudo):
-                    if vazio[:comeco] == " ":
-                        vazio+=i                
-                    comeco+=1
-                 
+                for k in vazio:
+                    if i!=k:
+                        vazio+=k
+                    else:
+                        vazio+=i 
     def contador(self, count):
         numero = 0
         if count in self.conteudo:
