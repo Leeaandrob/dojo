@@ -34,16 +34,30 @@ class String(object):
                 saida+=letra
         return saida
 
-    def tamanho(self):
+    def tamanho(self, tamanho):
         tamanho = 0 
         for i in self.conteudo:
             tamanho +=1
         return tamanho
    
-    def centralizar(self, largura, letra):
-        width = (largura*letra)+self.conteudo+(largura*letra)
-        return width
-         
+    def centralizar(self, largura, letra=" "):
+        vazio = ""
+        tamanho = self.tamanho(self.conteudo)
+        if largura < tamanho:
+            vazio = self.conteudo
+            return vazio
+        else:
+            centro = largura/2
+            resultado = self.tamanho(self.conteudo)/2
+            comeco = centro - resultado
+            vazio = letra * largura
+            import pdb; pdb.set_trace()
+            for i in self.conteudo:
+                while comeco < self.tamanho(self.conteudo):
+                    if vazio[:comeco] == " ":
+                        vazio+=i                
+                    comeco+=1
+                 
     def contador(self, count):
         numero = 0
         if count in self.conteudo:
