@@ -18,11 +18,16 @@ class StringTest(TestCase):
        self.assertEqual(resposta, esperado)
         
    def test_tamanho(self): 
-       esperado = 5
-       objeto = String("Teste")
-       resposta = objeto.tamanho()
-       
-       self.assertEqual(resposta, esperado)
+        objeto = String("teste")
+        self.assertEqual(objeto.tamanho(objeto), 5)
+   
+   def test_tamanho_com_string_vazia(self):
+        objeto = String(" ")
+        self.assertEqual(objeto.tamanho(objeto), 1)
+   
+   def test_tamanho_com_string_zero(self):
+        objeto = String("")
+        self.assertEqual(objeto.tamanho(objeto), 0)
 
    def test_lower_case(self):
        esperado = "teste"
@@ -39,13 +44,23 @@ class StringTest(TestCase):
        self.assertEqual(resposta, esperado)
        
    def test_centralizar(self):
-        esperado = "aaaatesteaaaa"
+        esperado = "teste"
         objeto = String("teste")
         resposta = objeto.centralizar(4, "a")
         
-        self.assertEqual(resposta, esperado) 
+        self.assertEqual(resposta, esperado)
+   
+   def test_centralizar_com_largura_maior_que_tamanho(self):
+       esperado = "testea"
+       objeto = String("teste")
+       resposta = objeto.centralizar(6, "a")
+       
+       self.assertEqual(resposta, esperado)
+             
+   def test_centralizar_com_largura_espaco_vazio(self):
+       esperado = "teste "
+       objeto = String("teste")
+       resposta = objeto.centralizar(6)
 
-   def test_contador(self):
-        esperado = 1
-        objeto = String("teste")
-        resposta = objeto.contador("tes")      
+       self.assertEqual(resposta, esperado)
+   
